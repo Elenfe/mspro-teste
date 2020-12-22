@@ -15,6 +15,16 @@ select:focus {
   outline: 0;
 }
 
+
+@keyframes moveToLeft {
+  0% {
+    transform: translateX(900px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 .modal-material {
   color: #fff;
   position: absolute;
@@ -24,8 +34,8 @@ select:focus {
   height: 100%;
   z-index: 1;
   background: #5a4b11;
-  // transition: all 300ms;
-  transform: translate(3em,0);
+  animation: moveToLeft 200ms ease-in;
+  animation-delay: 20ms;
 }
 
 .piechart-label {
